@@ -1,3 +1,5 @@
+package tests;
+
 import pages.Home_Page;
 import pages.AB_Testing_Page;
 import pages.Add_Element_Page;
@@ -14,25 +16,16 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
-//****NOTE: Element Locators Can be moved to the Common location i.e. POM as a Best Practice. For time being in this Project all the locators are hardcoded.
-
 @TestInstance(value = TestInstance.Lifecycle.PER_CLASS)
-public class BaseTestTest extends Utilities {
+public class UI_Tests extends Utilities {
 
 
     Home_Page home_Page = new Home_Page();
     AB_Testing_Page ab_Testing_Page = new AB_Testing_Page();
     Add_Element_Page add_Element_Page = new Add_Element_Page();
     DropdownPage dropdwon_Page = new DropdownPage();
-    //Utilities utils = new Utilities();
-    //private WebDriverWait wait= new WebDriverWait(this.driver, Duration.ofSeconds(30));
-
-    //By AB_Testing_Link = By.linkText("A/B Testing");
-    //By AB_Testing_Title = By.xpath("//*[@id=\"content\"]/div/h3");
-    //By Add_Remove_Link = By.linkText("Add/Remove Elements");
 
     By Basic_Auth_Header = By.xpath("//*[@id=\"content\"]/div/p");
-    //By Checkboxes_link = By.linkText("Checkboxes");
     By Checkbox1 = By.xpath("//*[@id=\"checkboxes\"]/input[1]");
 
     @org.junit.jupiter.api.Test
